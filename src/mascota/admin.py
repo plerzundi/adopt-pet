@@ -8,3 +8,8 @@ from .models import Tipo_Animal, Mascota
 class AdminTipoAnimal(admin.ModelAdmin):
     list_display = ('id','nombre_tipo','detalle',)
     list_filter  = ('nombre_tipo',)
+
+@admin.register(Mascota)
+class AdminMascota(admin.ModelAdmin):
+    list_display = ('id','nombre_mascota','imagen_mascota','fk_tipo','tamanio','edad','sexo')
+    list_filter = ('tamanio','sexo')
