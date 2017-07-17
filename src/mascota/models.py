@@ -8,6 +8,11 @@ class Tipo_Animal(models.Model):
     nombre_tipo = models.CharField(max_length=30)
     detalle     = models.TextField()
 
+    class Meta:
+        ordering = ('id',)
+        verbose_name ='Tipo Animal'
+        verbose_name_plural = 'Tipos de animales'
+
     def __str__(self):
         return self.nombre_tipo
 
